@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Sport Effect 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: 'Inter', sans-serif; background: #f0f2f5; }
+
+        /* АНИМИРОВАННЫЙ ФОН */
+        .ambient-bg {
+            position: absolute; top: 0; left: 0; width: 200%; height: 200%;
+            background: radial-gradient(circle at center, rgba(230,240,255,0.8) 0%, rgba(255,255,255,0) 60%);
+            animation: breathe 15s infinite ease-in-out alternate;
+            z-index: 0; pointer-events: none;
+        }
+        @keyframes breathe { from { transform: translate(-25%, -25%) scale(1); } to { transform: translate(0%, 0%) scale(1.1); } }
+
+        /* КАРТА (ВХОД) */
+        #map-stage {
+            width: 100vw; height: 100vh; position: relative; z-index: 1;
+            opacity: 0; transform: scale(1.05) translateY(20px);
+            animation: cinematicEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes cinematicEntrance { to { opacity: 1; transform: scale(1) translateY(0); } }
+
+        /* ИНТЕРФЕЙС (СТЕКЛО) */
+        .glass-panel {
+            position: absolute; z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-radius: 24px;
+            opacity: 0;
+        }
+
+        .header-ui {
+            top: 30px; left: 50%; transform: translateX(-50%) translateY(-20px);
+            padding: 16px 40px; text-align: center;
+            animation: slideDownFade 1s ease-out 0.4s forwards;
+        }
+        .header-ui h1 { margin: 0; font-size: 22px; font-weight: 800; color: #111; letter-spacing: -0.5px; }
+        .header-ui p { margin: 4px 0 0 0; font-size: 13px; font-weight: 500; color: #555; }
+
+        .legend-ui {
+            bottom: 40px; left: 40px; width: 320px; padding: 25px;
+            transform: translateY(20px);
+            animation: slideUpFade 1s ease-out 0.6s forwards;
+        }
+
+        @keyframes slideDownFade { to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
+
+        /* ШКАЛА */
+        .legend-title { font-weight: 700; font-size: 14px; margin-bottom: 15px; color: #222; }
+        .gradient-track {
+            height: 12px; width: 100%; border-radius: 6px; position: relative; overflow: hidden;
+            background: linear-gradient(90deg, #D32F2F 0%, #FFFFFF 50%, #00C853 100%);
+        }
+        .gradient-fill-animation {
+            position: absolute; top:0; left:0; width: 100%; height: 100%;
+            background: #f0f2f5;
+            animation: wipeReveal 2s cubic-bezier(0.65, 0, 0.35, 1) 0.8s forwards;
+        }
+        @keyframes wipeReveal { to { transform: translateX(100%); } }
+        
+        .legend-labels { display: flex; justify-content: space-between; margin-top: 10px; font-size: 11px; font-weight: 600; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+
+    <div class="glass-panel header-ui">
+        <h1>Global Sport-Wellbeing Effect</h1>
+        <p>Interactive Analysis | Fixed Effect + Random Slopes</p>
+    </div>
+
+    <div id="map-stage">
+        <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.1.min.js" integrity="sha256-4rD3fugVb/nVJYUv5Ky3v+fYXoouHaBSP20WIJuEiWg=" crossorigin="anonymous"></script>                <div id="fdfa7b11-c28b-4bc7-958f-137dc0c921e2" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("fdfa7b11-c28b-4bc7-958f-137dc0c921e2")) {                    Plotly.newPlot(                        "fdfa7b11-c28b-4bc7-958f-137dc0c921e2",                        [{"coloraxis":"coloraxis","customdata":[["AND",0.18880256774625573,0.2490517877866455,1004],["ARG",0.2568775987883547,0.19538060264700546,1003],["ARM",0.3208285844584444,0.042336637563803965,1223],["AUS",0.05372048864862711,0.1893980045827987,1813],["BGD",0.16762924703559667,0.15826439378212195,1200],["BOL",0.31830376150808126,0.07742169667966262,2067],["BRA",0.3282015598078707,0.15656996864797804,1762],["CAN",-0.06172746655740946,-0.08240485610469536,4018],["CHL",0.08402541602752,0.011177964766536366,1000],["CHN",0.16890082272491247,0.09228467304013746,3036],["COL",0.648,0.5535058133856013,1520],["CYP",-0.19278130171098917,-0.14436239058918288,1000],["CZE",-0.08641864595213145,-0.13492000150992767,1200],["DEU",0.246180710818384,0.1928498415315098,1528],["ECU",0.616,0.4892535864302834,1200],["EGY",-0.5187906348446867,-0.6724204902246267,1200],["ETH",-0.4192108237484953,-0.30991992064668245,1230],["GBR",0.12637237223586828,0.14393721883257984,2609],["GRC",-0.6062944257000944,-0.536213228125043,1200],["GTM",0.3200777745505312,0.33270698353104583,1229],["HKG",-0.022968212638284857,-0.32513995980537974,2075],["IDN",0.3400871134062746,0.31956667113440457,3200],["IND",0.05938060113019139,0.0974770392299015,1692],["IRN",-0.3857531273106596,-0.5318381783891535,1499],["IRQ",-0.7976594292859098,-0.9707140860778235,1200],["JOR",-0.15763172743120402,-0.10739777764223685,1203],["JPN",0.15468158337077886,-0.030263784858711007,1353],["KAZ",0.09746091577014715,0.03642992083238596,1276],["KEN",-0.16446325418749064,-0.1659706327283381,1266],["KGZ",0.679,0.7556109313276897,1200],["KOR",-0.2854135060051939,-0.2680713998426022,1245],["LBN",-0.19961238143243998,-0.19683151663992796,1200],["LBY",0.14043407651386053,0.3550282913877673,1196],["MAC",-0.027550677333261664,-0.16630204651783456,1023],["MAR",-0.1166631304959318,-0.26962791861636054,1200],["MDV",0.06727302816486747,0.06651225160576481,1039],["MEX",0.676,0.5752350286688632,1741],["MMR",0.19027356567582876,0.061832523098001156,1200],["MNG",-0.1677635931710264,-0.39031682930459455,1638],["MYS",-0.023109281931307013,-0.11813032341573725,1313],["NGA",-0.4578337394932767,-0.4240178855904175,1237],["NIC",0.492,0.3881049859553059,1200],["NIR",0.24697170915803698,0.3208033998104199,447],["NLD",0.16822191091975958,0.12765662613568207,2145],["NZL",0.10528556394181043,0.24585057452603637,1057],["PAK",0.27008987727365286,0.29140098979945966,1995],["PER",0.3858926868697145,0.18252974010176487,1400],["PHL",0.499,0.30446398254589,1200],["PRI",0.589,0.578053926828533,1127],["ROU",-0.13712559876241892,-0.1490088892625898,1257],["RUS",-0.02671993014612406,-0.2797492186745302,1810],["SGP",0.02197427439293653,-0.02724817421221816,2012],["SRB",-0.14007719096937388,-0.27508610083482016,1046],["SVK",-0.32998788592615336,-0.44513943511305226,1200],["THA",-0.09761527416506022,-0.11246817833275732,1500],["TJK",0.507,0.5846720530053396,1200],["TUN",-0.4064846360425016,-0.6269305029313995,1208],["TUR",-0.20669794318475931,-0.2321081053391526,2415],["TWN",0.119205580528591,-0.004131220322545939,1223],["UKR",-0.13090019163885325,-0.39639235423497665,1289],["URY",0.435,0.44277711707506406,1000],["USA",0.10193537684879095,0.012715022634295985,2596],["UZB",0.13264837625226766,0.23214299391726678,1250],["VEN",0.09455086800060064,-0.02972227453331084,1190],["VNM",0.549,0.5053735495087408,1200],["ZWE",-0.6289999210576078,-1.0633563288260701,1215]],"geo":"geo","hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003eEffect=%{z:.3f}\u003cbr\u003eHappiness=%{customdata[2]:.2f}\u003cbr\u003eN=%{customdata[3]}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["AND","ARG","ARM","AUS","BGD","BOL","BRA","CAN","CHL","CHN","COL","CYP","CZE","DEU","ECU","EGY","ETH","GBR","GRC","GTM","HKG","IDN","IND","IRN","IRQ","JOR","JPN","KAZ","KEN","KGZ","KOR","LBN","LBY","MAC","MAR","MDV","MEX","MMR","MNG","MYS","NGA","NIC","NIR","NLD","NZL","PAK","PER","PHL","PRI","ROU","RUS","SGP","SRB","SVK","THA","TJK","TUN","TUR","TWN","UKR","URY","USA","UZB","VEN","VNM","ZWE"],"locations":["AND","ARG","ARM","AUS","BGD","BOL","BRA","CAN","CHL","CHN","COL","CYP","CZE","DEU","ECU","EGY","ETH","GBR","GRC","GTM","HKG","IDN","IND","IRN","IRQ","JOR","JPN","KAZ","KEN","KGZ","KOR","LBN","LBY","MAC","MAR","MDV","MEX","MMR","MNG","MYS","NGA","NIC","NIR","NLD","NZL","PAK","PER","PHL","PRI","ROU","RUS","SGP","SRB","SVK","THA","TJK","TUN","TUR","TWN","UKR","URY","USA","UZB","VEN","VNM","ZWE"],"name":"","z":{"dtype":"f8","bdata":"sXzvuq4qyD9Yvne9rnDQP1i+d510iNQ\u002fwPK9e0CBqz+wfO8K4HTFP1i+d70WX9Q\u002fWL53HUEB1T9ADUIUvpqvv2D53o2wgrU\u002fsHzvyoqexT8j2\u002fl+arzkP1CDEMUOrci\u002foAYhSogftr+wfO962YLPP4PAyqFFtuM\u002f1CBE0e6Z4L+oQYiiWdTav7B870r4LMA\u002f1CBEkcNm479Yvnd9J3zUP4AahKj6hJe\u002fWL53vfzD1T\u002fA8r1XImeuP6hBiOItsNi\u002f1CBEEW2G6b9QgxDFRi3Ev7B87yqbzMM\u002fYPne1TLzuD9QgxDFIQ3Fv+58PzVeuuU\u002fqEGIAjdE0r9QgxAF5ozJv7B872q++cE\u002fgBqEqD42nL+gBiGKot29v2D53h\u002fOOLE\u002fbxKDwMqh5T+wfO9a4lrIP1CDEAVHecW\u002fgBqEqPWpl7+nQYjiJU3dv7ByaJHtfN8\u002fr3zv2sSczz+wfO+qS4jFP2D53qX+87o\u002fWL53DSdJ0T9Xvnc9d7LYP1YOLbKd798\u002fDAIrhxbZ4j9QgxDlVI3Bv4AahCh4XJu\u002ff+V7l2yAlj9QgxClDO7Bv6hBiIKFHtW\u002foAYhilD9uL\u002fTTWIQWDngP6hBiCLYA9q\u002fUIMQBRR1yr9h+d7FQYS+P1CDEGVWwcC\u002f16NwPQrX2z9g+d7Vbxi6P7B87zqf+sA\u002fYPneVXw0uD\u002fFILByaJHhP9QgRHHEIOS\u002f"},"type":"choropleth"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"geo":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"projection":{"type":"natural earth"},"center":{},"showframe":false,"showcoastlines":true,"coastlinecolor":"rgba(0,0,0,0.1)","showcountries":true,"countrycolor":"rgba(0,0,0,0.15)","showocean":true,"oceancolor":"rgba(0,0,0,0)","showland":true,"landcolor":"#f4f4f8","fitbounds":"locations"},"coloraxis":{"colorbar":{"title":{"text":"Effect"}},"colorscale":[[0.0,"#D32F2F"],[0.5,"#FFFFFF"],[1.0,"#00C853"]],"cmid":0,"showscale":false},"legend":{"tracegroupgap":0},"margin":{"t":0,"r":0,"l":0,"b":0},"hoverlabel":{"font":{"size":15,"family":"Arial, sans-serif"},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#cccccc"},"dragmode":"pan"},                        {"displayModeBar": false, "scrollZoom": true, "responsive": true}                    )                };            </script>        </div>
+    </div>
+
+    <div class="glass-panel legend-ui">
+        <div class="legend-title">Association Strength (Beta)</div>
+        <div class="gradient-track">
+            <div class="gradient-fill-animation"></div>
+        </div>
+        <div class="legend-labels">
+            <span>Negative<br>(Crisis)</span>
+            <span style="text-align:center">Neutral</span>
+            <span style="text-align:right">Positive<br>(Active Society)</span>
+        </div>
+    </div>
+</body>
+</html>
